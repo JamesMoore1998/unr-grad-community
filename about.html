@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — UNR Graduate Community</title>
+  <meta name="description" content="What UNR Graduate Community is, who it's for, and how to contribute. An independent, community-run project — not an official UNR publication." />
+  <meta name="og:title" content="About — UNR Graduate Community" />
+  <meta name="og:description" content="What UNR Graduate Community is, who it's for, and how to contribute." />
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="UNR Graduate Community" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">UNR</span>
+        <span class="brand__name">Graduate Community</span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li>
+            <a href="#" class="placeholder-link" title="Placeholder — Discord invite link not yet available (TODO_DISCORD_INVITE_URL)">
+              Join Discord <span class="placeholder-note">(coming soon)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <h1>About</h1>
+        <p class="hero__lede">Why this site exists, who it's for, and how it's run.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose">
+        <h2>Why this exists</h2>
+        <p>
+          Graduate student life at UNR involves a lot of scattered information: department
+          announcements, university offices, informal advice passed between students, event
+          flyers, and Discord servers that not everyone knows about. UNR Graduate Community is
+          an attempt to put the useful parts of that in one place — not to replace any of it,
+          but to make it easier to find.
+        </p>
+
+        <h2>Who it's for</h2>
+        <p>
+          Current graduate students at UNR looking for events, resources, or a community to ask
+          questions in, and incoming graduate students trying to get oriented before they arrive.
+        </p>
+
+        <h2>What this site is not</h2>
+        <p>
+          UNR Graduate Community is an independent, community-run project. It is
+          <strong>not</strong> officially operated, endorsed, or maintained by the University of
+          Nevada, Reno. Where the site links to or references university offices, programs, or
+          policies, that information should be verified against official UNR sources — links
+          marked <span class="todo-tag">TODO</span> have not yet been confirmed and are
+          placeholders.
+        </p>
+
+        <h2>How it's built</h2>
+        <p>
+          The site is a small static website: plain HTML, CSS, and a little JavaScript, with no
+          build step, framework, or backend. The Google Calendar stays the source of truth for
+          event scheduling, and Discord stays the source of truth for community discussion — this
+          site links to and embeds those rather than trying to rebuild them.
+        </p>
+
+        <h2>How to contribute</h2>
+        <p>
+          The site's code and content live in a GitHub repository. Contributions — corrections,
+          new resources, design improvements — are welcome through pull requests. See
+          <code>CONTRIBUTING.md</code> in the repository for details.
+        </p>
+        <p>
+          <a href="#" class="placeholder-link" title="Placeholder — GitHub repository link not yet public (TODO_GITHUB_REPOSITORY_URL)">
+            View the repository on GitHub <span class="placeholder-note">(link TODO)</span>
+          </a>
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Public contact: <code>TODO_PUBLIC_CONTACT</code>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#" class="placeholder-link" title="Placeholder — GitHub repository link not yet public (TODO_GITHUB_REPOSITORY_URL)">
+              GitHub <span class="placeholder-note">(TODO)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="disclaimer">
+        UNR Graduate Community is an independent, community-run project for graduate students
+        at the University of Nevada, Reno. It is not officially operated, endorsed, or
+        maintained by the University of Nevada, Reno.
+      </p>
+      <p class="footer-meta">Public contact: <code>TODO_PUBLIC_CONTACT</code></p>
+    </div>
+  </footer>
+</body>
+</html>

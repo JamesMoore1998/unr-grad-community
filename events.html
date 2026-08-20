@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events — UNR Graduate Community</title>
+  <meta name="description" content="Graduate student events at UNR: seminars, workshops, defenses, and social events, gathered on a shared Google Calendar." />
+  <meta name="og:title" content="Events — UNR Graduate Community" />
+  <meta name="og:description" content="Graduate student events at UNR, gathered on a shared Google Calendar." />
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="UNR Graduate Community" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">UNR</span>
+        <span class="brand__name">Graduate Community</span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#" class="placeholder-link" title="Placeholder — Discord invite link not yet available (TODO_DISCORD_INVITE_URL)">
+              Join Discord <span class="placeholder-note">(coming soon)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <h1>Events</h1>
+        <p class="hero__lede">
+          A shared Google Calendar is the source of truth for graduate student events. This
+          page is a home for browsing that calendar and for suggesting events that belong on it.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="calendar-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="calendar-heading">Calendar</h2>
+          <p>Once connected, the calendar below will show upcoming events without leaving this page.</p>
+        </div>
+
+        <!--
+          Once a public Google Calendar URL is available, replace the placeholder
+          below with an iframe such as:
+
+          <div class="calendar-frame-wrap">
+            <iframe
+              src="TODO_GOOGLE_CALENDAR_EMBED_URL"
+              title="UNR Graduate Community events calendar"
+              loading="lazy"
+            ></iframe>
+          </div>
+        -->
+        <div class="placeholder-box" role="img" aria-label="Calendar placeholder. The shared Google Calendar has not been connected yet.">
+          <h3>Calendar coming soon</h3>
+          <p>
+            This space will hold an embedded view of the shared Google Calendar.
+            <br />
+            <code>TODO_GOOGLE_CALENDAR_EMBED_URL</code>
+          </p>
+        </div>
+
+        <div class="btn-row">
+          <a href="#" class="btn btn--primary placeholder-link" title="Placeholder — public calendar link not yet available (TODO_GOOGLE_CALENDAR_PUBLIC_URL)">
+            Open full calendar <span class="placeholder-note">(coming soon)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="categories-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="categories-heading">What kinds of events show up here</h2>
+          <p>
+            These are examples of the kinds of events the calendar might include, not an
+            official or exhaustive list.
+          </p>
+        </div>
+
+        <ul class="tag-list">
+          <li class="tag">Seminars</li>
+          <li class="tag">Thesis &amp; dissertation defenses</li>
+          <li class="tag">Workshops</li>
+          <li class="tag">Professional development</li>
+          <li class="tag">Social events</li>
+          <li class="tag">Student organization events</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="submit-event" aria-labelledby="submit-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="submit-heading">Submit an event</h2>
+          <p>
+            Event submissions will go through a simple external form rather than a custom
+            system on this site, so nothing here needs a backend.
+          </p>
+        </div>
+
+        <div class="placeholder-box">
+          <h3>Submission form coming soon</h3>
+          <p>
+            This will link out to a Google Form (or similar) once one is set up.
+            <br />
+            <code>TODO_EVENT_SUBMISSION_URL</code>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#" class="placeholder-link" title="Placeholder — GitHub repository link not yet public (TODO_GITHUB_REPOSITORY_URL)">
+              GitHub <span class="placeholder-note">(TODO)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="disclaimer">
+        UNR Graduate Community is an independent, community-run project for graduate students
+        at the University of Nevada, Reno. It is not officially operated, endorsed, or
+        maintained by the University of Nevada, Reno.
+      </p>
+      <p class="footer-meta">Public contact: <code>TODO_PUBLIC_CONTACT</code></p>
+    </div>
+  </footer>
+</body>
+</html>

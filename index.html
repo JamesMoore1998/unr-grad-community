@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UNR Graduate Community</title>
+  <meta name="description" content="A community-run hub for graduate students at the University of Nevada, Reno: events, resources, and a shared Discord community." />
+  <meta name="og:title" content="UNR Graduate Community" />
+  <meta name="og:description" content="A community-run hub for graduate students at the University of Nevada, Reno." />
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="UNR Graduate Community" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">UNR</span>
+        <span class="brand__name">Graduate Community</span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#" class="placeholder-link" title="Placeholder — Discord invite link not yet available (TODO_DISCORD_INVITE_URL)">
+              Join Discord <span class="placeholder-note">(coming soon)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero__eyebrow">Graduate students &middot; University of Nevada, Reno</p>
+        <h1>UNR Graduate Community</h1>
+        <p class="hero__lede">
+          A community-run hub that brings together events, resources, and a shared Discord
+          for graduate students at the University of Nevada, Reno.
+        </p>
+        <p class="hero__disclaimer">
+          This is an independent, student-run project. It is not officially operated,
+          endorsed, or maintained by the University of Nevada, Reno.
+          <a href="about.html">Read more on the About page</a>.
+        </p>
+        <div class="btn-row">
+          <a href="#" class="btn btn--primary placeholder-link" title="Placeholder — Discord invite link not yet available (TODO_DISCORD_INVITE_URL)">
+            Join Discord <span class="placeholder-note">(coming soon)</span>
+          </a>
+          <a href="events.html" class="btn btn--secondary">View Events</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="calendar-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="calendar-heading">Upcoming events</h2>
+          <p>
+            Events are scheduled on a shared Google Calendar, which stays the source of truth
+            for dates and times.
+          </p>
+        </div>
+
+        <!--
+          Once a public Google Calendar URL is available, replace the placeholder
+          below with an iframe such as:
+
+          <div class="calendar-frame-wrap">
+            <iframe
+              src="TODO_GOOGLE_CALENDAR_EMBED_URL"
+              title="UNR Graduate Community events calendar"
+              loading="lazy"
+            ></iframe>
+          </div>
+        -->
+        <div class="placeholder-box" role="img" aria-label="Calendar placeholder. The shared Google Calendar has not been connected yet.">
+          <h3>Calendar coming soon</h3>
+          <p>
+            This space will hold an embedded view of the shared Google Calendar.
+            <br />
+            <code>TODO_GOOGLE_CALENDAR_EMBED_URL</code>
+          </p>
+        </div>
+
+        <div class="btn-row">
+          <a href="events.html" class="btn btn--secondary">See event details</a>
+          <a href="#" class="btn placeholder-link" title="Placeholder — public calendar link not yet available (TODO_GOOGLE_CALENDAR_PUBLIC_URL)">
+            Open full calendar <span class="placeholder-note">(coming soon)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="resources-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="resources-heading">Community resources</h2>
+          <p>
+            A starting set of categories for the resources directory. Entries within each
+            category are still being filled in — see the
+            <a href="resources.html">Resources page</a> for details and TODOs.
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-item">
+            <h3><a href="resources.html#graduate-school">Graduate School</a></h3>
+            <p>Admissions, degree requirements, forms, and graduate-school-wide policies.</p>
+          </div>
+          <div class="category-item">
+            <h3><a href="resources.html#academics">Academic Resources</a></h3>
+            <p>Writing support, libraries, advising, and general academic help.</p>
+          </div>
+          <div class="category-item">
+            <h3><a href="resources.html#research">Research &amp; Seminars</a></h3>
+            <p>Department seminars, colloquia, and other research-related opportunities.</p>
+          </div>
+          <div class="category-item">
+            <h3><a href="resources.html#campus-services">Campus Services</a></h3>
+            <p>Health, wellness, transportation, and other services on campus.</p>
+          </div>
+          <div class="category-item">
+            <h3><a href="resources.html#organizations">Student Organizations</a></h3>
+            <p>Graduate student associations and department-level organizations.</p>
+          </div>
+          <div class="category-item">
+            <h3><a href="resources.html#professional-development">Professional Development</a></h3>
+            <p>Career services, teaching resources, and skill-building opportunities.</p>
+          </div>
+          <div class="category-item">
+            <h3><a href="resources.html#community">Community &amp; Social</a></h3>
+            <p>Ways to meet other graduate students outside of coursework and research.</p>
+          </div>
+          <div class="category-item">
+            <h3><a href="resources.html#incoming-students">New Graduate Students</a></h3>
+            <p>Starting points for students who are new to UNR or new to Reno.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="involved-heading">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="involved-heading">Get involved</h2>
+          <p>This project only works if graduate students help build it.</p>
+        </div>
+
+        <div class="involved-grid">
+          <div class="involved-item">
+            <h3>Join the Discord</h3>
+            <p>
+              Informal discussion, questions, and community happen on Discord.
+              <br />
+              <a href="#" class="placeholder-link" title="Placeholder — Discord invite link not yet available (TODO_DISCORD_INVITE_URL)">
+                Join Discord <span class="placeholder-note">(coming soon)</span>
+              </a>
+            </p>
+          </div>
+          <div class="involved-item">
+            <h3>Suggest an event</h3>
+            <p>
+              Know about a talk, workshop, or social happening?
+              <br />
+              <a href="events.html#submit-event" class="placeholder-link" title="Placeholder — event submission link not yet available (TODO_EVENT_SUBMISSION_URL)">
+                Submit an event <span class="placeholder-note">(coming soon)</span>
+              </a>
+            </p>
+          </div>
+          <div class="involved-item">
+            <h3>Suggest a resource</h3>
+            <p>
+              Found something useful that belongs on the Resources page?
+              <br />
+              <a href="resources.html#submit-resource" class="placeholder-link" title="Placeholder — resource submission link not yet available (TODO_RESOURCE_SUBMISSION_URL)">
+                Suggest a resource <span class="placeholder-note">(coming soon)</span>
+              </a>
+            </p>
+          </div>
+          <div class="involved-item">
+            <h3>Contribute to the site</h3>
+            <p>
+              The site itself is open to contributions on GitHub.
+              <br />
+              <a href="about.html">Read the About page</a> for how the project is organized.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="#" class="placeholder-link" title="Placeholder — GitHub repository link not yet public (TODO_GITHUB_REPOSITORY_URL)">
+              GitHub <span class="placeholder-note">(TODO)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="disclaimer">
+        UNR Graduate Community is an independent, community-run project for graduate students
+        at the University of Nevada, Reno. It is not officially operated, endorsed, or
+        maintained by the University of Nevada, Reno.
+      </p>
+      <p class="footer-meta">Public contact: <code>TODO_PUBLIC_CONTACT</code></p>
+    </div>
+  </footer>
+</body>
+</html>
