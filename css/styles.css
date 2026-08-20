@@ -520,6 +520,16 @@ a:not([class]):hover {
   font-weight: 600;
 }
 
+a.resource-item__title {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a.resource-item__title:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
 .resource-item__note {
   color: var(--color-text-muted);
   font-size: 0.95rem;
