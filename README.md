@@ -85,6 +85,9 @@ No Node.js, npm, or other tooling install is required either way.
 - **Event submissions** — the "Submit an event" links (`events.html` and the homepage "Get
   involved" section) point at a Microsoft Forms calendar access request form. To change it,
   update the `href` in both places.
+- **Resource submissions** — the "Suggest a resource" links (`resources.html` and the homepage
+  "Get involved" section) point at a Microsoft Forms resource suggestion form. To change it,
+  update the `href` in both places.
 - **Resources** — edit the relevant `<section class="resource-section" id="...">` block in
   `resources.html` directly. Each entry is a `.resource-item` with a title, an optional
   `<span class="todo-tag">TODO</span>`, and a note. Remove the TODO tag once a real, verified
@@ -133,7 +136,6 @@ grep -rn "TODO" --include="*.html" --include="*.md" .
 
 At a high level, still needed:
 
-- `TODO_RESOURCE_SUBMISSION_URL` — resource submission form URL.
 - `TODO_PUBLIC_CONTACT` — a public contact (email, etc.) for the project.
 - `TODO_GITHUB_REPOSITORY_URL` — the public-facing repository link to show on the site itself
   (the repo exists now, at `https://github.com/JamesMoore1998/unr-grad-community`, but it's
