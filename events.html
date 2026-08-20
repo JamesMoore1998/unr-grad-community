@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Events — UNR Graduate Community</title>
-  <meta name="description" content="Graduate student events at UNR: seminars, workshops, defenses, and social events, gathered on a shared Google Calendar." />
+  <meta name="description" content="Graduate student events at UNR: seminars, workshops, defenses, and social events, gathered on a shared Outlook Calendar." />
   <meta name="og:title" content="Events — UNR Graduate Community" />
-  <meta name="og:description" content="Graduate student events at UNR, gathered on a shared Google Calendar." />
+  <meta name="og:description" content="Graduate student events at UNR, gathered on a shared Outlook Calendar." />
   <meta name="og:type" content="website" />
   <meta name="og:site_name" content="UNR Graduate Community" />
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
@@ -36,9 +36,7 @@
           <li><a href="resources.html">Resources</a></li>
           <li><a href="about.html">About</a></li>
           <li>
-            <a href="#" class="placeholder-link" title="Placeholder — Discord invite link not yet available (TODO_DISCORD_INVITE_URL)">
-              Join Discord <span class="placeholder-note">(coming soon)</span>
-            </a>
+            <a href="resources.html#community">Join Discord</a>
           </li>
         </ul>
       </nav>
@@ -50,7 +48,7 @@
       <div class="wrap">
         <h1>Events</h1>
         <p class="hero__lede">
-          A shared Google Calendar is the source of truth for graduate student events. This
+          A shared Outlook Calendar is the source of truth for graduate student events. This
           page is a home for browsing that calendar and for suggesting events that belong on it.
         </p>
       </div>
@@ -60,33 +58,23 @@
       <div class="wrap">
         <div class="section-heading">
           <h2 id="calendar-heading">Calendar</h2>
-          <p>Once connected, the calendar below will show upcoming events without leaving this page.</p>
+          <p>The calendar below shows upcoming events without leaving this page.</p>
         </div>
 
-        <!--
-          Once a public Google Calendar URL is available, replace the placeholder
-          below with an iframe such as:
-
-          <div class="calendar-frame-wrap">
-            <iframe
-              src="TODO_GOOGLE_CALENDAR_EMBED_URL"
-              title="UNR Graduate Community events calendar"
-              loading="lazy"
-            ></iframe>
-          </div>
-        -->
-        <div class="placeholder-box" role="img" aria-label="Calendar placeholder. The shared Google Calendar has not been connected yet.">
-          <h3>Calendar coming soon</h3>
-          <p>
-            This space will hold an embedded view of the shared Google Calendar.
-            <br />
-            <code>TODO_GOOGLE_CALENDAR_EMBED_URL</code>
-          </p>
+        <div class="calendar-frame-wrap">
+          <iframe
+            src="https://outlook.office365.com/owa/calendar/713b6d6cdc584bcaaad777a1920fe5b3@unr.edu/d279ae247147415f947377ece4fa14c916905851628772413744/calendar.html"
+            title="UNR Graduate Community events calendar"
+            loading="lazy"
+          ></iframe>
         </div>
 
         <div class="btn-row">
-          <a href="#" class="btn btn--primary placeholder-link" title="Placeholder — public calendar link not yet available (TODO_GOOGLE_CALENDAR_PUBLIC_URL)">
-            Open full calendar <span class="placeholder-note">(coming soon)</span>
+          <a href="https://outlook.office365.com/owa/calendar/713b6d6cdc584bcaaad777a1920fe5b3@unr.edu/d279ae247147415f947377ece4fa14c916905851628772413744/calendar.html" class="btn btn--primary">
+            Open full calendar
+          </a>
+          <a href="https://outlook.office365.com/owa/calendar/713b6d6cdc584bcaaad777a1920fe5b3@unr.edu/d279ae247147415f947377ece4fa14c916905851628772413744/calendar.ics" class="btn btn--secondary">
+            Subscribe (.ics)
           </a>
         </div>
       </div>

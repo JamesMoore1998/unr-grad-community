@@ -449,6 +449,15 @@ a:not([class]):hover {
   }
 }
 
+/* ---------- Discord widget ---------- */
+.discord-widget-wrap iframe {
+  width: 100%;
+  max-width: 350px;
+  height: 500px;
+  border: 0;
+  border-radius: var(--radius-md);
+}
+
 /* ---------- Category / resource grids ---------- */
 .category-grid {
   display: grid;

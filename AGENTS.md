@@ -25,9 +25,12 @@ Don't duplicate what another service should own:
 
 - **GitHub repository** — website code, styling, navigation, curated resource listings,
   explanatory content.
-- **Google Calendar** — event schedule, dates, times. The site embeds/links to it; it does not
-  maintain its own event database.
-- **Discord** — community discussion, informal communication.
+- **Outlook Calendar** — event schedule, dates, times (a published, publicly viewable calendar —
+  not a login-gated resource). The site embeds/links to it; it does not maintain its own event
+  database.
+- **Discord** — community discussion, informal communication. The site embeds Discord's public
+  server widget (`resources.html`, Community & Social section) rather than maintaining its own
+  member list or chat.
 - **Google Form (or similar)** — event/resource submissions, once a form URL is supplied.
 
 Link to or embed these services. Do not try to reproduce their functionality on this site.
@@ -62,9 +65,6 @@ equally to AI agents and human contributors.
 Named placeholders used throughout the site (grep for these to find unresolved items):
 
 ```
-TODO_DISCORD_INVITE_URL
-TODO_GOOGLE_CALENDAR_EMBED_URL
-TODO_GOOGLE_CALENDAR_PUBLIC_URL
 TODO_EVENT_SUBMISSION_URL
 TODO_RESOURCE_SUBMISSION_URL
 TODO_PUBLIC_CONTACT
@@ -78,6 +78,11 @@ calendar credentials, private email addresses, student records, or other non-pub
 information. This repo may become public — treat everything committed to it accordingly. If
 you find existing credentials in the repo, flag it and recommend rotation/removal; do not
 silently rewrite Git history to remove it without explicit approval.
+
+Note: the Outlook Calendar URL and Discord widget ID currently embedded in `index.html` and
+`events.html`/`resources.html` are intentionally public, unguessable-but-shareable identifiers
+(Microsoft's "Publish a calendar" feature and Discord's server-widget feature, respectively) —
+not login-gated secrets. Don't confuse a public identifier like these with a credential.
 
 ## Deployment
 

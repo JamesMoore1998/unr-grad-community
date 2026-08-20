@@ -9,7 +9,7 @@ volunteers — the process is intentionally lightweight.
   tools. See [AGENTS.md](AGENTS.md) for the full dependency policy.
 - Keep changes as small and focused as the task allows. Don't refactor unrelated code while
   fixing something else.
-- This site links to and embeds Discord and Google Calendar rather than rebuilding their
+- This site links to and embeds Discord and Outlook Calendar rather than rebuilding their
   functionality — don't add features that duplicate what those services already do well.
 
 ## Making a small change

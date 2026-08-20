@@ -11,8 +11,9 @@ maintained by the University of Nevada, Reno.
 
 **Not deployed.** GitHub Pages has not been enabled for this repository, and no public release
 has been made. The repository is currently private. This is a first working version of the
-site, built with placeholder content and TODOs where real information (Discord invite, calendar
-URL, verified resource links, etc.) hasn't been supplied yet — see [Outstanding TODOs](#todos).
+site: the Outlook Calendar and Discord widget are live and embedded, but other real information
+(verified resource links, submission form URLs, a public contact) hasn't been supplied yet — see
+[Outstanding TODOs](#todos).
 
 ## Architecture
 
@@ -24,8 +25,9 @@ The site is plain, static HTML/CSS/JS with no build step, framework, or backend:
 - GitHub Pages serves static files directly, so this is a natural fit.
 
 Events and community discussion are intentionally **not** rebuilt on this site. The shared
-Google Calendar stays the source of truth for event scheduling, and Discord stays the source of
-truth for discussion. The site links to and (once a URL is available) embeds them.
+Outlook Calendar stays the source of truth for event scheduling, and Discord stays the source of
+truth for discussion. The site embeds both (`index.html`/`events.html` for the calendar,
+`resources.html` for the Discord widget) rather than reproducing their functionality.
 
 See [AGENTS.md](AGENTS.md) for the fuller set of standing engineering rules this project
 follows (dependency policy, content-integrity rules, deployment constraints).
@@ -72,15 +74,14 @@ No Node.js, npm, or other tooling install is required either way.
 
 ## Updating content
 
-- **Discord invite URL** — replace every `TODO_DISCORD_INVITE_URL` placeholder (nav, hero,
-  footer, "Get involved" section, `resources.html` Community section) with a real invite link,
-  and turn those `<a href="#" class="placeholder-link" ...>` elements into normal links (drop
-  `href="#"`, `class="placeholder-link"`, the `title` attribute, and the
-  `<span class="placeholder-note">` text).
-- **Google Calendar** — see the HTML comments above the calendar placeholder in `index.html` and
-  `events.html` for the exact `<iframe>` markup to drop in once
-  `TODO_GOOGLE_CALENDAR_EMBED_URL` (embed URL) and `TODO_GOOGLE_CALENDAR_PUBLIC_URL` (the
-  "open full calendar" link) are available.
+- **Discord** — the "Join Discord" nav/CTA links currently point to `resources.html#community`,
+  where a live Discord server widget (`discord.com/widget?id=...`) is embedded. If a direct
+  invite URL (`discord.gg/...`) becomes available later, those links can point straight to it
+  instead — that's an optional simplification, not a blocker.
+- **Outlook Calendar** — the embed (`index.html`, `events.html`) and the "Open full
+  calendar"/"Subscribe (.ics)" links all point at the published Outlook calendar URLs. To change
+  calendars, update the `src` on both `<iframe>`s inside `.calendar-frame-wrap` and the
+  `calendar.html`/`calendar.ics` links in `index.html` and `events.html`.
 - **Resources** — edit the relevant `<section class="resource-section" id="...">` block in
   `resources.html` directly. Each entry is a `.resource-item` with a title, an optional
   `<span class="todo-tag">TODO</span>`, and a note. Remove the TODO tag once a real, verified
@@ -129,9 +130,6 @@ grep -rn "TODO" --include="*.html" --include="*.md" .
 
 At a high level, still needed:
 
-- `TODO_DISCORD_INVITE_URL` — Discord invite link.
-- `TODO_GOOGLE_CALENDAR_EMBED_URL` — Google Calendar embed URL.
-- `TODO_GOOGLE_CALENDAR_PUBLIC_URL` — public link to open the full calendar.
 - `TODO_EVENT_SUBMISSION_URL` — event submission form URL (e.g., a Google Form).
 - `TODO_RESOURCE_SUBMISSION_URL` — resource submission form URL.
 - `TODO_PUBLIC_CONTACT` — a public contact (email, etc.) for the project.
