@@ -75,6 +75,7 @@ select {
   --color-primary-dark: #12293f;
   --color-accent: #a15c1f;
   --color-accent-dark: #7c460f;
+  --color-sage: #5c7052;
   --color-sage-dark: #46583f;
   --color-focus: #2563eb;
 
@@ -112,7 +113,7 @@ h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.25;
-  color: var(--color-primary-dark);
+  color: var(--color-sage);
 }
 
 h1 {
@@ -137,7 +138,7 @@ a {
 }
 
 a:not([class]) {
-  color: var(--color-primary);
+  color: var(--color-sage);
 }
 
 a:not([class]):hover {
@@ -239,14 +240,14 @@ a:not([class]):hover {
 .brand__name {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--color-sage-dark);
+  color: var(--color-sage);
   font-size: 1.5rem;
 }
 
 .brand__tagline {
   font-family: var(--font-body);
   font-weight: 500;
-  color: var(--color-sage-dark);
+  color: var(--color-sage);
   font-size: 0.8rem;
   letter-spacing: 0.02em;
 }
@@ -346,8 +347,8 @@ a:not([class]):hover {
 
 .btn--secondary {
   background: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--color-sage);
+  border-color: var(--color-sage);
 }
 
 .btn--secondary:hover {
@@ -530,7 +531,7 @@ a:not([class]):hover {
 }
 
 a.resource-item__title {
-  color: var(--color-primary);
+  color: var(--color-sage);
   text-decoration: none;
 }
 

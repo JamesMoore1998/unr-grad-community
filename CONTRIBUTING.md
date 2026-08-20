@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping build UNR Graduate Community. This is a small, static site maintained by
+Thanks for helping build Into the Sagebrush. This is a small, static site maintained by
 volunteers — the process is intentionally lightweight.
 
 ## Philosophy

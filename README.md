@@ -1,8 +1,12 @@
-# UNR Graduate Community
+# Into the Sagebrush
 
 A lightweight, community-run website for graduate students at the University of Nevada, Reno.
 It gathers events, resources, a Discord community, and information for incoming and current
 graduate students in one place.
+
+The repository is still named `unr-grad-community` — renaming a GitHub repository is a bigger,
+more disruptive step than renaming the site itself (it changes clone URLs), so that's left alone
+unless requested. "Into the Sagebrush" is the site's public name.
 
 This is an **independent, community-run project**. It is not officially operated, endorsed, or
 maintained by the University of Nevada, Reno.
