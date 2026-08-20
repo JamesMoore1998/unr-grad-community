@@ -140,13 +140,14 @@ grep -rn "TODO" --include="*.html" --include="*.md" .
 
 At a high level, still needed:
 
-- `TODO_PUBLIC_CONTACT` — a public contact (email, etc.) for the project.
 - `TODO_GITHUB_REPOSITORY_URL` — the public-facing repository link to show on the site itself
   (the repo exists now, at `https://github.com/JamesMoore1998/unr-grad-community`, but it's
   private, so the site doesn't link to it publicly yet).
-- All `resources.html` entries currently marked with a `TODO` tag — every specific UNR link,
-  office name, or policy needs to be verified before it's added.
 - No `LICENSE` has been chosen yet — see the note in that section below.
+
+Every `resources.html` entry now either links to a verified official UNR page or plainly says
+so when no single official source exists. Future additions without a verified link should still
+be marked `TODO` rather than guessed at — see AGENTS.md.
 
 ## License
 
