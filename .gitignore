@@ -1,0 +1,12 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor metadata
+.vscode/
+.idea/
+*.swp
+
+# Local secrets/config, if ever introduced
+.env
+.env.local
