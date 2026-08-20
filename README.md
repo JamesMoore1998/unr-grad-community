@@ -151,5 +151,4 @@ be marked `TODO` rather than guessed at — see AGENTS.md.
 
 ## License
 
-No license currently exists in this repository, and none has been chosen on the repository
-owner's behalf. See [`LICENSE-TODO.md`](LICENSE-TODO.md).
+[MIT](LICENSE).
