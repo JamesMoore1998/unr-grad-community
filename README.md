@@ -82,6 +82,9 @@ No Node.js, npm, or other tooling install is required either way.
   calendar"/"Subscribe (.ics)" links all point at the published Outlook calendar URLs. To change
   calendars, update the `src` on both `<iframe>`s inside `.calendar-frame-wrap` and the
   `calendar.html`/`calendar.ics` links in `index.html` and `events.html`.
+- **Event submissions** — the "Submit an event" links (`events.html` and the homepage "Get
+  involved" section) point at a Microsoft Forms calendar access request form. To change it,
+  update the `href` in both places.
 - **Resources** — edit the relevant `<section class="resource-section" id="...">` block in
   `resources.html` directly. Each entry is a `.resource-item` with a title, an optional
   `<span class="todo-tag">TODO</span>`, and a note. Remove the TODO tag once a real, verified
@@ -130,7 +133,6 @@ grep -rn "TODO" --include="*.html" --include="*.md" .
 
 At a high level, still needed:
 
-- `TODO_EVENT_SUBMISSION_URL` — event submission form URL (e.g., a Google Form).
 - `TODO_RESOURCE_SUBMISSION_URL` — resource submission form URL.
 - `TODO_PUBLIC_CONTACT` — a public contact (email, etc.) for the project.
 - `TODO_GITHUB_REPOSITORY_URL` — the public-facing repository link to show on the site itself

@@ -65,7 +65,6 @@ equally to AI agents and human contributors.
 Named placeholders used throughout the site (grep for these to find unresolved items):
 
 ```
-TODO_EVENT_SUBMISSION_URL
 TODO_RESOURCE_SUBMISSION_URL
 TODO_PUBLIC_CONTACT
 TODO_GITHUB_REPOSITORY_URL
