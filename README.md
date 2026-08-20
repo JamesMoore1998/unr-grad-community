@@ -13,11 +13,11 @@ maintained by the University of Nevada, Reno.
 
 ## Current status
 
-**Not deployed.** GitHub Pages has not been enabled for this repository, and no public release
-has been made. The repository is currently private. This is a first working version of the
-site: the Outlook Calendar and Discord widget are live and embedded, but other real information
-(verified resource links, submission form URLs, a public contact) hasn't been supplied yet — see
-[Outstanding TODOs](#todos).
+**Live.** The repository is public and GitHub Pages is deployed from `main`:
+
+**https://jamesmoore1998.github.io/unr-grad-community/**
+
+See [Outstanding TODOs](#outstanding-todos) for what's still unresolved.
 
 ## Architecture
 
@@ -49,6 +49,7 @@ follows (dependency policy, content-integrity rules, deployment constraints).
 ├── assets/icons/           Favicon (original artwork, not UNR branding)
 ├── AGENTS.md               Standing instructions for AI coding agents
 ├── CONTRIBUTING.md          Contributor guide
+├── LICENSE                   MIT
 └── README.md                 This file
 ```
 
@@ -102,18 +103,13 @@ No Node.js, npm, or other tooling install is required either way.
 
 ## Deployment
 
-GitHub Pages has **not** been enabled. To deploy later (only with explicit approval from the
-repository owner):
+Live at **https://jamesmoore1998.github.io/unr-grad-community/**, deployed via GitHub Pages
+("Deploy from a branch," `main`, `/ (root)`) as a **project** Pages site. The repository is
+public, which Pages requires on the free plan.
 
-1. Repository Settings → Pages.
-2. Source: "Deploy from a branch."
-3. Branch: `main`, folder: `/ (root)`.
-4. If deploying as a **project** Pages site (`https://USERNAME.github.io/unr-grad-community/`),
-   no changes are needed — the site already uses relative paths throughout.
-5. If deploying as a **user/organization** Pages site instead, the repository would need to be
-   renamed to `USERNAME.github.io`.
-6. Note: GitHub Pages requires the repository to be public (or a paid plan for private Pages
-   sites) — this repo is currently private.
+To change how it's deployed: Repository Settings → Pages. If it ever needed to move to a
+**user/organization** Pages site instead (`https://USERNAME.github.io/`), the repository would
+need to be renamed to `USERNAME.github.io` — not done here, and not necessary unless requested.
 
 ### Custom domain
 
@@ -132,22 +128,16 @@ here once a real domain exists. Nothing invented in the meantime.
 
 ## Outstanding TODOs
 
-Search the repository for `TODO` to find every unresolved placeholder:
+Nothing is currently outstanding. Every `resources.html` entry either links to a verified
+official UNR page or plainly says so when no single official source exists, and the GitHub
+repository link is live now that the repo is public.
+
+Future additions without a verified link should still be marked `TODO` rather than guessed at
+— see AGENTS.md. To check current status at any point:
 
 ```bash
 grep -rn "TODO" --include="*.html" --include="*.md" .
 ```
-
-At a high level, still needed:
-
-- `TODO_GITHUB_REPOSITORY_URL` — the public-facing repository link to show on the site itself
-  (the repo exists now, at `https://github.com/JamesMoore1998/unr-grad-community`, but it's
-  private, so the site doesn't link to it publicly yet).
-- No `LICENSE` has been chosen yet — see the note in that section below.
-
-Every `resources.html` entry now either links to a verified official UNR page or plainly says
-so when no single official source exists. Future additions without a verified link should still
-be marked `TODO` rather than guessed at — see AGENTS.md.
 
 ## License
 

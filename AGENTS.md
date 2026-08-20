@@ -63,11 +63,8 @@ eligibility rules, personnel, events, or endorsements. If information isn't veri
 explicit `TODO:` (or use one of the named placeholders below) instead of guessing. This applies
 equally to AI agents and human contributors.
 
-Named placeholders used throughout the site (grep for these to find unresolved items):
-
-```
-TODO_GITHUB_REPOSITORY_URL
-```
+No named `TODO_*` placeholders remain unresolved as of this writing (grep for `TODO_` to check
+current status). If a new one is needed, follow the same pattern: `TODO_SOME_DESCRIPTIVE_NAME`.
 
 ## Privacy
 
@@ -90,8 +87,10 @@ Preserve GitHub Pages project-path compatibility:
 - Don't assume the site is served from `/`.
 - No server-side routing or logic that depends on the deployed origin.
 
-Do not enable GitHub Pages, publish a release, or otherwise make the site externally visible
-without explicit approval from the repository owner.
+The site is live via GitHub Pages at https://jamesmoore1998.github.io/unr-grad-community/,
+deployed from `main`. Don't change deployment settings (branch source, visibility, custom
+domain, disabling Pages) or publish a release without explicit approval from the repository
+owner.
 
 ## Testing expectations
 
