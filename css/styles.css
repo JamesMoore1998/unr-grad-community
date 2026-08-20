@@ -75,6 +75,7 @@ select {
   --color-primary-dark: #12293f;
   --color-accent: #a15c1f;
   --color-accent-dark: #7c460f;
+  --color-sage-dark: #46583f;
   --color-focus: #2563eb;
 
   --color-placeholder-bg: #f8f4ec;
@@ -229,22 +230,25 @@ a:not([class]):hover {
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.1rem;
   text-decoration: none;
-  font-family: var(--font-heading);
-}
-
-.brand__mark {
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: 0.04em;
+  line-height: 1.15;
 }
 
 .brand__name {
+  font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--color-text);
-  font-size: 1.125rem;
+  color: var(--color-sage-dark);
+  font-size: 1.5rem;
+}
+
+.brand__tagline {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-sage-dark);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
 }
 
 .nav-toggle {
