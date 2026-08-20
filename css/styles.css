@@ -311,6 +311,11 @@ a:not([class]):hover {
   font-weight: 600;
 }
 
+.nav-list a.nav-link--featured {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
