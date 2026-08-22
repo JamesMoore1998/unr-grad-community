@@ -10,3 +10,7 @@ Thumbs.db
 # Local secrets/config, if ever introduced
 .env
 .env.local
+
+# Raw reference art (unused by the site itself — only the cropped/derived
+# sprite sheets in assets/sprites/*/ are actually referenced in CSS)
+assets/sprites/_source/

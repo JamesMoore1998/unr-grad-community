@@ -92,7 +92,7 @@ select {
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2.5rem;
-  --space-5: 4rem;
+  --space-5: 3.5rem;
 }
 
 /* ---------- Base ---------- */
@@ -309,6 +309,7 @@ a:not([class]):hover {
 
 .nav-list a[aria-current="page"] {
   border-bottom-color: var(--color-sage);
+  font-weight: 700;
 }
 
 .nav-list .placeholder-link {
@@ -651,6 +652,226 @@ a.resource-item__title:hover {
 .prose ol li + li {
   margin-top: 0.4rem;
 }
+
+/* ---------- Wildlife sprites: sage grouse & pronghorn ----------
+   Small decorative natural-history details, built from hand-cropped pixel
+   art sprite sheets (see assets/sprites/) and animated with CSS steps() on
+   background-position — the frame-stepping itself needs no JS. Fully
+   decorative: aria-hidden, pointer-events: none, and gated behind the
+   `.js` class (same convention the mobile nav toggle uses) so a no-JS
+   visitor gets a sane blank state instead of a frozen mid-animation frame.
+   Behavior/timing (the emerge trigger, speech-bubble cycle, pronghorn
+   position/pauses) lives in js/main.js under "Wildlife sprites".
+
+   sage-grouse-emerge.png is an 8-frame horizontal sprite sheet (source
+   frames padded to a uniform 229x245px each, bush persistent across every
+   frame); pronghorn-run.png is 8 frames (padded to 243x212px each);
+   pronghorn-graze.png is a 5-frame stop/lower-head/graze/raise-head cycle
+   (padded to 260x236px each). All frame counts were measured directly
+   from the source reference image, not assumed - see the READMEs under
+   assets/sprites/.
+
+   Frame-stepping math uses PIXEL offsets, not percentages:
+   background-position percentages are computed from (container size -
+   background size), which inverts sign once the background is larger
+   than the container (it always is here) - easy to get backwards. Plain
+   px avoids that. For a strip of N frames displayed at DISPLAY_W each:
+   background-size: (N*DISPLAY_W)px DISPLAY_H px; steps(N-1); end position
+   -((N-1)*DISPLAY_W)px. If you swap in art with a different frame count
+   or size, update the DISPLAY_W/H and N used below to match. */
+
+.sage-grouse-scene {
+  position: relative;
+  width: 60px;
+  height: 64px;
+  pointer-events: none;
+}
+
+.sage-grouse-scene__emerge {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/sprites/sage-grouse/sage-grouse-emerge.png");
+  background-repeat: no-repeat;
+  /* 8 frames at 60px display width each = 480px background width. */
+  background-size: 480px 64px;
+  background-position: 0 0;
+  image-rendering: pixelated;
+}
+
+.js .sage-grouse-scene.is-visible .sage-grouse-scene__emerge {
+  /* Plays the 8-frame hidden -> peek -> emerging -> fully displayed
+     sequence once (bush stays in the same place the whole time) and holds
+     on the last frame, then layers a subtle infinite breathing pulse on
+     top (a separate CSS property, so it doesn't interfere with the
+     frame-stepping animation above it). */
+  animation:
+    grouse-emerge-steps 2.4s steps(7) forwards,
+    grouse-idle-pulse 4.5s ease-in-out infinite 2.6s;
+}
+
+@keyframes grouse-emerge-steps {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    /* -(8-1)*60px */
+    background-position-x: -420px;
+  }
+}
+
+@keyframes grouse-idle-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.sage-grouse-scene__bubble {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, 4px);
+  margin: 0 0 0.4rem;
+  white-space: nowrap;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 3;
+}
+
+.sage-grouse-scene__bubble.is-shown {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .sage-grouse-scene.is-visible .sage-grouse-scene__emerge {
+    animation: none;
+    background-position-x: -420px;
+  }
+
+  .sage-grouse-scene__bubble {
+    transition: opacity 0.2s linear;
+  }
+}
+
+/* Pronghorn runner: an in-flow banner strip at the actual bottom of the
+   page (not a fixed viewport overlay) - it only becomes visible once a
+   visitor scrolls down to it, same as any other page content. Uses a
+   cropped landscape illustration (banner-landscape.png, the scene band
+   cropped out of the wider reference image - see
+   assets/sprites/pronghorn/README.md) as its background. Hidden without
+   JS (nothing would move the pronghorn) and under reduced motion / narrow
+   viewports (see media queries below). The banner is stretched to its own
+   full width at a fixed height, so it isn't pixel-perfect at every
+   viewport width - a deliberate simplicity tradeoff over e.g. a
+   viewport-width-based aspect-ratio (which also has a real rendering bug
+   with background-image sizing in at least one browser engine we tested
+   against - see git history if revisiting this). Present on every page
+   (index/events/resources/about) - this repo has no shared template
+   layer, so the markup is duplicated identically on each page; keep them
+   in sync if you change this. */
+.pronghorn-runner {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  pointer-events: none;
+  background-image: url("../assets/sprites/pronghorn/banner-landscape.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.js .pronghorn-runner {
+  display: block;
+}
+
+.pronghorn-runner__pos {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  transform: translateX(-90px);
+  transition: transform linear;
+  will-change: transform;
+}
+
+.pronghorn-runner__run {
+  width: 70px;
+  height: 61px;
+  background-image: url("../assets/sprites/pronghorn/pronghorn-run.png");
+  background-repeat: no-repeat;
+  /* 8 frames at 70px display width each = 560px background width. */
+  background-size: 560px 61px;
+  image-rendering: pixelated;
+  animation: pronghorn-run-steps 0.9s steps(7) infinite;
+}
+
+.pronghorn-runner__graze {
+  width: 70px;
+  height: 64px;
+  background-image: url("../assets/sprites/pronghorn/pronghorn-graze.png");
+  background-repeat: no-repeat;
+  /* 5 frames at 70px display width each = 350px background width. */
+  background-size: 350px 64px;
+  image-rendering: pixelated;
+  display: none;
+}
+
+.pronghorn-runner__pos.is-grazing .pronghorn-runner__run {
+  display: none;
+}
+
+.pronghorn-runner__pos.is-grazing .pronghorn-runner__graze {
+  display: block;
+  /* Plays the 5-frame stop -> lower-head -> graze -> raise-head -> stop
+     cycle once per graze pause and holds on the last (standing) frame;
+     restarts naturally each time this element toggles back from
+     display: none, so it needs no JS beyond the is-grazing class toggle
+     already driving initPronghorn()'s pauses. */
+  animation: pronghorn-graze-steps 1.8s steps(4) forwards;
+}
+
+@keyframes pronghorn-run-steps {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    /* -(8-1)*70px */
+    background-position-x: -490px;
+  }
+}
+
+@keyframes pronghorn-graze-steps {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    /* -(5-1)*70px */
+    background-position-x: -280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .pronghorn-runner {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .js .pronghorn-runner {
+    display: none;
+  }
+}
+/* ---------- END Wildlife sprites ---------- */
 
 /* ---------- Small screens ---------- */
 @media (max-width: 700px) {
