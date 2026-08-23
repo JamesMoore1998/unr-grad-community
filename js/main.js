@@ -70,7 +70,6 @@
   };
 
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var narrowViewport = window.matchMedia("(max-width: 700px)").matches;
 
   function initSageGrouse() {
     var scene = document.querySelector(".sage-grouse-scene");
@@ -100,9 +99,9 @@
   }
 
   function initPronghorn() {
-    // Reduced motion / narrow viewports: CSS already hides the element;
-    // skip scheduling any of the timers/transitions below entirely.
-    if (reducedMotion || narrowViewport) return;
+    // Reduced motion: CSS already hides the element; skip scheduling any
+    // of the timers/transitions below entirely.
+    if (reducedMotion) return;
 
     var pos = document.querySelector(".pronghorn-runner__pos");
     if (!pos) return;

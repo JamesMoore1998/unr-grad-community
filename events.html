@@ -38,6 +38,19 @@
           <li>
             <a href="resources.html#community" class="nav-link--featured">Join Discord</a>
           </li>
+          <li>
+            <!-- Sage grouse "lek" scene: small decorative natural-history detail.
+                 Purely decorative (aria-hidden). Without JS, only the sagebrush
+                 cover art is visible - see the `.js` gating in css/styles.css.
+                 Behavior lives in js/main.js under "Wildlife sprites". Safe to
+                 delete this <li> (and the matching CSS/JS "Wildlife sprites"
+                 sections) if you want it gone. Kept identical across every
+                 page - no shared template layer in this repo. -->
+            <div class="sage-grouse-scene" aria-hidden="true">
+              <div class="sage-grouse-scene__emerge"></div>
+              <p class="sage-grouse-scene__bubble" data-grouse-bubble></p>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>

@@ -769,10 +769,14 @@ a.resource-item__title:hover {
    cropped landscape illustration (banner-landscape.png, the scene band
    cropped out of the wider reference image - see
    assets/sprites/pronghorn/README.md) as its background. Hidden without
-   JS (nothing would move the pronghorn) and under reduced motion / narrow
-   viewports (see media queries below). The banner is stretched to its own
-   full width at a fixed height, so it isn't pixel-perfect at every
-   viewport width - a deliberate simplicity tradeoff over e.g. a
+   JS (nothing would move the pronghorn) and under reduced motion (see
+   media query below). Shown at every viewport width, including mobile -
+   the background-image assets were already being downloaded there
+   regardless of visibility, so hiding it bought no bandwidth savings,
+   only a smaller/less-crowded appearance that turned out not to be
+   wanted. The banner is stretched to its own full width at a fixed
+   height, so it isn't pixel-perfect at every viewport width - a
+   deliberate simplicity tradeoff over e.g. a
    viewport-width-based aspect-ratio (which also has a real rendering bug
    with background-image sizing in at least one browser engine we tested
    against - see git history if revisiting this). Present on every page
@@ -861,12 +865,6 @@ a.resource-item__title:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .js .pronghorn-runner {
-    display: none;
-  }
-}
-
-@media (max-width: 700px) {
   .js .pronghorn-runner {
     display: none;
   }
