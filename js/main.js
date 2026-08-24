@@ -44,20 +44,11 @@
      not here — see the "Wildlife sprites" comment in css/styles.css for
      the steps()/background-size math if you swap in art with a different
      frame count. This config only holds the behavioral/timing values JS
-     actually needs (emerge delay, speech-bubble cycle, run/graze timing).
-     See the READMEs in assets/sprites/ (one per creature folder) for
-     asset details. */
+     actually needs (emerge delay, run/graze timing). See the READMEs in
+     assets/sprites/ (one per creature folder) for asset details. */
   var WILDLIFE_CONFIG = {
     sageGrouse: {
-      emergeDelay: 1200,
-      firstBubbleDelay: 5000,
-      bubbleInterval: 27000,
-      bubbleVisibleFor: 4500,
-      lines: [
-        "Any questions?",
-        "Welcome to the field.",
-        "Ask me about my research."
-      ]
+      emergeDelay: 1200
     },
     pronghorn: {
       firstRunDelay: 6000,
@@ -73,28 +64,12 @@
 
   function initSageGrouse() {
     var scene = document.querySelector(".sage-grouse-scene");
-    var bubble = scene ? scene.querySelector("[data-grouse-bubble]") : null;
-    if (!scene || !bubble) return;
+    if (!scene) return;
 
     var cfg = WILDLIFE_CONFIG.sageGrouse;
 
     setTimeout(function () {
       scene.classList.add("is-visible");
-
-      var lineIndex = 0;
-      function showBubble() {
-        bubble.textContent = cfg.lines[lineIndex % cfg.lines.length];
-        lineIndex++;
-        bubble.classList.add("is-shown");
-        setTimeout(function () {
-          bubble.classList.remove("is-shown");
-        }, cfg.bubbleVisibleFor);
-      }
-
-      setTimeout(function () {
-        showBubble();
-        setInterval(showBubble, cfg.bubbleInterval);
-      }, cfg.firstBubbleDelay);
     }, cfg.emergeDelay);
   }
 
