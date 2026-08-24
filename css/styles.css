@@ -660,8 +660,8 @@ a.resource-item__title:hover {
    decorative: aria-hidden, pointer-events: none, and gated behind the
    `.js` class (same convention the mobile nav toggle uses) so a no-JS
    visitor gets a sane blank state instead of a frozen mid-animation frame.
-   Behavior/timing (the emerge trigger, speech-bubble cycle, pronghorn
-   position/pauses) lives in js/main.js under "Wildlife sprites".
+   Behavior/timing (the emerge trigger, pronghorn position/pauses) lives
+   in js/main.js under "Wildlife sprites".
 
    sage-grouse-emerge.png is an 8-frame horizontal sprite sheet (source
    frames padded to a uniform 229x245px each, bush persistent across every
@@ -729,37 +729,10 @@ a.resource-item__title:hover {
   }
 }
 
-.sage-grouse-scene__bubble {
-  position: absolute;
-  left: 50%;
-  bottom: 100%;
-  transform: translate(-50%, 4px);
-  margin: 0 0 0.4rem;
-  white-space: nowrap;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 0.3rem 0.6rem;
-  font-size: 0.78rem;
-  color: var(--color-text-muted);
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  z-index: 3;
-}
-
-.sage-grouse-scene__bubble.is-shown {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .js .sage-grouse-scene.is-visible .sage-grouse-scene__emerge {
     animation: none;
     background-position-x: -420px;
-  }
-
-  .sage-grouse-scene__bubble {
-    transition: opacity 0.2s linear;
   }
 }
 
